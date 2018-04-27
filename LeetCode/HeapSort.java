@@ -34,8 +34,7 @@ public class HeapSort {
             if (arr[j] > temp){
                 arr[i] = arr[j];
                 i = j;
-            }
-            else {
+            } else {
                 break;
             }
         }
