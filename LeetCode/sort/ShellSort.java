@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCode.sort;
 
 /**
  * Created by Administrator on 2018/3/23.
@@ -14,10 +14,7 @@ public class ShellSort {
                 }
             }
         }
-
-
     }
-
     public static void swap(int []arr,int a,int b){
               arr[a] = arr[a]+arr[b];
               arr[b] = arr[a]-arr[b];
@@ -29,9 +26,5 @@ public class ShellSort {
         for (int  s : arr) {
             System.out.println(s);
         }
-
-
-
-
     }
 }

@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCode.sort;
 
 import java.util.Arrays;
 
@@ -10,7 +10,6 @@ public class MergerSort {
     public static void sort(int num[]){
         int []temp = new int[num.length];
         sort(num,0,num.length - 1,temp);
-
     }
     public static void sort(int[] nums, int left, int right, int[] temp){
         if (left < right) {
@@ -47,6 +46,4 @@ public class MergerSort {
         sort(num);
         System.out.println(Arrays.toString(num));
     }
-
-
 }
