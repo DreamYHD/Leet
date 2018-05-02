@@ -34,6 +34,19 @@ public class BinSearch {
             return binarySearch(arr, l, mid - 1, target);
         }
     }
+    public static int binarySearch2(int arr[],int l,int r,int target){
+        int mid = (l + r)/2;
+        if (arr[mid] == target){
+            return  mid;
+        }
+        if ( l > r){
+            return -1;
+        }else if (target > arr[mid]){
+            return binarySearch2(arr, mid + 1, r, target);
+        }else {
+            return binarySearch(arr,l,mid -1 ,target);
+        }
+    }
     public static void main(String[] args) {
         int srcArray[] = {3,5,11,17,21,23,28,30,32,50,64,78,81,95,101};
         System.out.println(binarySearch(srcArray, 0, srcArray.length - 1, 222));

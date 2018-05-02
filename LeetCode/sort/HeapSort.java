@@ -18,7 +18,6 @@ public class HeapSort {
             adjustHeap(arr,0,i);//从新对堆进行调整
         }
     }
-
     /**
      * 调整大顶堆，仅仅是调整过程，建立在大顶堆构建的基础上
      * @param arr
@@ -28,7 +27,7 @@ public class HeapSort {
     private static void adjustHeap(int[] arr, int i, int length) {
         int temp = arr[i];
         for (int j = i * 2 + 1; j < length; j = j * 2 + 1) {
-            if ( j + 1 < length && arr [j] < arr [j+1]){
+            if ( j + 1 < length && arr[j] < arr[j+1]){
                 j ++;
             }
             if (arr[j] > temp){
