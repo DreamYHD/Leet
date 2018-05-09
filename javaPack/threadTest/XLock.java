@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class XLock {
     ReentrantLock lock = new ReentrantLock(true);
     void test(){
-        lock.lock();//如果被其他锁自愿锁定，会在这里等待锁释放，达到暂停的效果
+        lock.lock();//              ，会在这里等待锁释放，达到暂停的效果
         try {
             test1();
         }finally {
