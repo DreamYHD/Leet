@@ -11,4 +11,46 @@ package LeetCode.interview;
  * step3: 用跟新后的指针做新一轮的查找
  */
 public class Day1to5 {
+    public static int min(int numbers[]){
+        if (numbers == null || numbers.length == 0) {
+            throw new RuntimeException("invalid");
+        }
+        int lo = 0;
+        int hi = numbers.length - 1;
+        int mi = lo;
+        while (numbers[lo] >= numbers[hi]){
+            if ((hi - lo) == 1){
+                return numbers[hi];
+            }
+            //取中间数
+            mi = (lo + hi) / 2;
+            if (numbers[lo] == numbers[hi] && numbers[lo] == numbers[mi] ) {
+                return minInorder(numbers,hi,lo);
+            }
+            if (numbers[mi] >= numbers[lo]){
+                lo = mi;
+            }else if (numbers[mi] <= numbers[hi]){
+                hi = mi;
+            }
+
+        }
+        return numbers[mi];
+    }
+
+
+    public static int minInorder(int[]numbers,int start,int end){
+        int result = numbers[start];
+        for (int i = start + 1; i <= end; i++) {
+            if (result > numbers[i]){
+                result = numbers[i];
+            }
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+
+
+
+
+    }
 }
