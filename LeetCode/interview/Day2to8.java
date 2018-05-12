@@ -30,12 +30,20 @@ public class Day2to8 {
 
     private static void printArr(int[] arr) {
         //找到第一个非0元素
+        int index = 0;
+        while (index < arr.length && arr[index]==0){
+            index ++;
+        }
+        for (int i = index; i < arr.length ; i++) {
+            System.out.print(arr[i]);
+        }
         //从第一个非0值开始输出到最后一个元素
+        System.out.println();
     }
 
     public static void main(String[] args) {
 
-
+        printOneToNthDigits(10);
 
 
     }
