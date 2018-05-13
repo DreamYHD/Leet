@@ -15,7 +15,7 @@ public class Day2to7 {
         int result = 0;
         for (int i = 0; i < 32 ; i++) {
             result += (n & 1);
-            n >>>= 01;
+            n >>>= 1;
         }
         return result;
     }

@@ -10,9 +10,5 @@ package LeetCode.interview;
 public class Day1to3 {
     public static void main(String[] args) {
 
-
-
-
-
     }
 }
