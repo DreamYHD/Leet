@@ -19,7 +19,6 @@ public class Day4to16 {
         int changeS = 0;
         int changeE = length;
 
-
         while (changeT <= changeB){
             while (indexL <= changeE){
                 System.out.print(arr[indexH][indexL]+" ");
@@ -49,14 +48,11 @@ public class Day4to16 {
                 System.out.print(arr[indexH][indexL]+" ");
                 indexH --;
             }
-            changeT ++;
+            changeS ++;
             System.out.println();
             indexH ++;
+            indexL ++;
         }
-
-
-
-
     }
     public static void main(String[] args) {
         int [][]arr = new int[][]{
@@ -66,9 +62,6 @@ public class Day4to16 {
                 {20,19,18,17,16},
                 {21,22,23,24,25},};
         all(arr);
-
-
-
     }
 
 }
