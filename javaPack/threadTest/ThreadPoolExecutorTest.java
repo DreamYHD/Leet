@@ -32,6 +32,7 @@ public class ThreadPoolExecutorTest {
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
+        executor.execute(new FutureTask<Integer>(() -> null));
         //方法2
         Future<String>future1 = executor.submit(() -> {
             throw new NullPointerException();

@@ -32,6 +32,18 @@ public class Day3to12 {
         }
         return left;
     }
+    public static ListNode reserveHead2(ListNode head){
+        if (head == null)throw new NullPointerException();
+        ListNode left = null;
+        ListNode right = head;
+        while (right != null){
+            head = right.next;
+            right.next = left;
+            left = right;
+            right = head;
+        }
+        return left;
+    }
     public static void main(String[] args) {
         ListNode node = new ListNode();
         node.value = 1;
