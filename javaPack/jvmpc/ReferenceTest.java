@@ -17,6 +17,7 @@ public class ReferenceTest {
         }else {
             s = new String("hello");
             softReference = new SoftReference(s);
+            
         }
         WeakReference weakReference = new WeakReference(s);
 
