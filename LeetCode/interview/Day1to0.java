@@ -36,6 +36,8 @@ public class Day1to0 {
         while ( usedLength >= 0 && usedLength <= targetCount){
             if (string.charAt(usedLength) == ' '){
                 chars[targetCount--] = '0';
+
+
                 chars[targetCount--] = '2';
                 chars[targetCount--] = '%';
             }else {
