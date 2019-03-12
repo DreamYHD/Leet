@@ -5,4 +5,5 @@ package javaPack.basepac;
  */
 public interface ClientTest {
     void  request();
+
 }

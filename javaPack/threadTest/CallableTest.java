@@ -19,7 +19,21 @@ public class CallableTest implements Callable<Integer>{
         return i;
     }
     public static void main(String[] args) {
-     CallableTest callableTest = new CallableTest();
+        CallableTest callableTest = new CallableTest();
+        FutureTask<Integer>futureTask = new FutureTask<Integer>(callableTest);
+        for (int i = 0; i < 10 ; i++) {
+            System.out.println(Thread.currentThread().getName().toString());
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            if ( i == 2){
+                new Thread(futureTask,"ceshi").start();
+            }
+
+        }
+/*     CallableTest callableTest = new CallableTest();
      FutureTask<Integer> futureTask = new FutureTask<Integer>(callableTest);
         for (int i = 0; i < 10 ; i++) {
             System.out.println(Thread.currentThread().getName()+" " + i);
@@ -39,6 +53,6 @@ public class CallableTest implements Callable<Integer>{
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }

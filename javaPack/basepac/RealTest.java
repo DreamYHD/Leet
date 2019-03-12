@@ -22,6 +22,7 @@ public class RealTest  implements ClientTest{
         ClientTest clientTest = (ClientTest) Proxy.newProxyInstance(RealTest.class.getClassLoader()
         ,RealTest.class.getInterfaces(),proxyHandler);
         clientTest.request();
+       
 
     }
 }
