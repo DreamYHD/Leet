@@ -19,5 +19,6 @@ public class Util {
         threadB2.start();
         threadB3.start();
         //join使当前任务先执行完成，然后时当前线程无限期阻塞，等待线程x销毁后再继续执行线程后面的代码
+        //join(200)的内部是使用wait(200)方法来实现的，所以join（200）具有释放锁的功能
     }
 }

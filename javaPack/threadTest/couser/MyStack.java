@@ -35,7 +35,6 @@ public class MyStack {
         list.remove(0);
         this.notifyAll();
         System.out.println("pop"+list.size());
-
     }
 
 }
