@@ -62,8 +62,36 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int a[] = new int[]{9,8,7,6,5,2,4,5,1,0};
-        quickSort(a,0,a.length-1);
+        sort_2(a,0,a.length-1);
         System.out.println(Arrays.toString(a));
 
     }
+    public static void sort_2(int []a,int left,int right){
+        int i,j,temp;
+        if (left > right ){
+            return;
+        }
+        temp = a[left];
+        i = left;
+        j = right;
+        while ( i != j){
+            while (a[j] >= temp && i < j){
+                j --;
+            }
+            while (a[i] <= temp && i < j){
+                i++;
+            }
+            if (i < j){
+               a[i] = a[i] + a[j];
+               a[j] = a[i] - a[j];
+               a[i] = a[i] - a[j];
+            }
+            a[left] = a[i];
+            a[i] = temp;
+            sort_2(a,left,i-1);
+            sort_2(a,i+1,right);
+
+        }
+    }
+
 }
