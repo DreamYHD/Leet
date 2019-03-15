@@ -17,6 +17,7 @@ public class Day1to1 {
     public static class ListNode{
         int val;//节点的值
         ListNode next;//下一个节点的位置
+
     }
     public static void printListInverselyUsingIteration(ListNode root){
         Stack<ListNode>stack = new Stack<>();
